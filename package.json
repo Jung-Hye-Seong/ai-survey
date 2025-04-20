@@ -1,10 +1,13 @@
 {
-  "name": "emotional-dependence-on-ai",
+  "name": "ai-survey",
+  "type": "module",
   "version": "1.0.0",
-  "main": "index.js",
-
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "type": "module"
+  "main": "server.mjs",
+  "scripts": {
+    "start": "node server.mjs"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  }
 }
