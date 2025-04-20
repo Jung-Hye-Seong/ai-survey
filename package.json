@@ -1,0 +1,10 @@
+{
+  "name": "emotional-dependence-on-ai",
+  "version": "1.0.0",
+  "main": "index.js",
+
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module"
+}

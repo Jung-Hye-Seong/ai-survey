@@ -1,0 +1,104 @@
+/* submit.css */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+    color: #111827;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .submit-container {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 550px;
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 0.6s ease-in-out;
+  }
+  
+  .checkmark {
+    font-size: 60px;
+    color: #10b981; /* Tailwind emerald-500 */
+    margin-bottom: 20px;
+    animation: popIn 0.5s ease forwards;
+  }
+  
+  h1 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #1f2937; /* Tailwind gray-800 */
+  }
+  
+  p {
+    font-size: 16px;
+    color: #4b5563; /* Tailwind gray-600 */
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+  
+  .back-btn {
+    display: inline-block;
+    background-color: #3b82f6; /* Tailwind blue-500 */
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .back-btn:hover {
+    background-color: #2563eb; /* Tailwind blue-600 */
+    transform: translateY(-2px);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes popIn {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive design */
+  @media (max-width: 500px) {
+    .thankyou-container {
+      padding: 30px 20px;
+    }
+  
+    h1 {
+      font-size: 22px;
+    }
+  
+    p {
+      font-size: 14px;
+    }
+  }
+  
