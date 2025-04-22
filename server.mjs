@@ -30,7 +30,7 @@ app.post("/addResults", async (req, res) => {
   
       const resultEntry = { Perception, Tendency, Dependence, Age, Gender };
   
-      const resultsFile = "C://Users//JHSub//OneDrive//바탕 화면//results.json";
+      const resultsFile = "여기다가 처넣어서 뭐 해가지고 db에 올리든가 하는겨";
   
       let existingResults = [];
       try {
