@@ -4,6 +4,8 @@ import { fileURLToPath } from "url";
 import path from "path";
 import questions from "./questions.json" assert { type: "json" };
 import fs from "fs/promises";
+import { saveResult } from "./db.js";
+
 
 const app = express();
 const port = 3000;
@@ -29,20 +31,8 @@ app.post("/addResults", async (req, res) => {
       const { Perception, Tendency, Dependence, Age, Gender } = req.body;
   
       const resultEntry = { Perception, Tendency, Dependence, Age, Gender };
-  
-      const resultsFile = "여기다가 처넣어서 뭐 해가지고 db에 올리든가 하는겨";
-  
-      let existingResults = [];
-      try {
-        const data = await fs.readFile(resultsFile, "utf-8");
-        existingResults = JSON.parse(data);
-      } catch (readError) {
-        console.warn("results.json 없음. 새로 생성합니다.");
-      }
-  
-      existingResults.push(resultEntry);
-  
-      await fs.writeFile(resultsFile, JSON.stringify(existingResults, null, 2), "utf-8");
+      await saveResult(resultEntry);
+
   
       res.status(200).json({ message: "결과 저장 완료" });
     } catch (err) {
